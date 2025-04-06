@@ -46,20 +46,21 @@ func main() {
 
 	// array com append
 
-	var tamanho2 int
-	fmt.Print("Digite o tamanho do array: ")
-	fmt.Scanln(&tamanho2)
+	var tamanho3 int
 
-	var arr2 []int // slice vazio
+	fmt.Printf("Digite aqui o tamanho do array3: ")
+	fmt.Scanln(&tamanho3)
 
-	fmt.Println("Digite os números do array:")
-	for i := 0; i < tamanho2; i++ {
-		var valor int
-		fmt.Printf("Número %d: ", i+1)
-		fmt.Scanln(&valor)
-		arr2 = append(arr2, valor)
+	var arr3 []int
+
+	fmt.Printf("Digite aqui os elementos do array3: ")
+
+	for i := 0; i < tamanho3; i++ {
+		var x int
+		fmt.Scanln(&x)
+		arr3 = append(arr3, x)
 	}
 
-	fmt.Println("\nArray digitado:", arr2)
+	fmt.Println(arr3)
 
 }
