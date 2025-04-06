@@ -1,6 +1,7 @@
 package main
 
 import (
+	"awesomeProject/math"
 	"fmt"
 )
 
@@ -21,11 +22,10 @@ func main() {
 	fmt.Println("d:", d)
 	fmt.Println("e:", e)
 
-	result := Soma(1, 1)
+	result := math.Soma(1, 1)
 	fmt.Println("soma: ", result)
 
-}
+	result2 := math.SquareX(2000000000)
+	fmt.Println(result2)
 
-func Soma(a int, b int) int {
-	return a + b
 }
