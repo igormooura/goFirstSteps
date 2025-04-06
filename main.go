@@ -20,4 +20,12 @@ func main() {
 	fmt.Println("c:", c)
 	fmt.Println("d:", d)
 	fmt.Println("e:", e)
+
+	result := Soma(1, 1)
+	fmt.Println("soma: ", result)
+
+}
+
+func Soma(a int, b int) int {
+	return a + b
 }
