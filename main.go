@@ -2,6 +2,7 @@ package main
 
 import (
 	"awesomeProject/math"
+	"awesomeProject/pessoas"
 	"fmt"
 )
 
@@ -44,6 +45,7 @@ func main() {
 
 	fmt.Println("\nArray digitado:", arr)
 
+	fmt.Println("================================")
 	// array com append
 
 	var tamanho3 int
@@ -62,5 +64,18 @@ func main() {
 	}
 
 	fmt.Println(arr3)
+
+	fmt.Println("================================")
+
+	cleiton := pessoas.Pessoa{
+		Nome:  "Cleiton Silva",
+		Idade: 33,
+	}
+
+	pessoas.ShowPessoa(&cleiton)
+
+	cleiton.Nome = "Cleitinho mudou de nome"
+
+	pessoas.ShowPessoa(&cleiton)
 
 }
