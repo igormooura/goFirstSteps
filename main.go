@@ -3,6 +3,7 @@ package main
 import (
 	"awesomeProject/math"
 	"awesomeProject/pessoas"
+	"awesomeProject/dataStructures"
 	"fmt"
 )
 
@@ -78,4 +79,27 @@ func main() {
 
 	pessoas.ShowPessoa(&cleiton)
 
+	fmt.Println("================================")
+
+	//  Linked List
+
+	ll := &dataStructures.LinkedList{}
+
+	ll.Prepend(&dataStructures.Node{Data: 10})
+	ll.Prepend(&dataStructures.Node{Data: 20})
+	ll.Prepend(&dataStructures.Node{Data: 30})
+
+	fmt.Println("Lista após adicionar elementos:")
+	ll.PrintListData() 
+
+	ll.DeleteNode(20)
+
+	fmt.Println("Lista após deletar o nó com valor 20:")
+	ll.PrintListData() 
+
+	ll.DeleteNode(30)
+	ll.DeleteNode(10)
+
+	fmt.Println("Lista após deletar o nó com valor 30 e 10:")
+	ll.PrintListData() 
 }
