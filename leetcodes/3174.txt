@@ -1,0 +1,43 @@
+func clearDigits(s string) string {
+	var output []string
+
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+
+		if c >= '0' && c <= '9' {
+			if len(output) > 0 {
+				output = output[:len(output)-1] 
+			}
+		} else {
+			output = append(output, string(c))
+		}
+	}
+
+    result := ""
+	for _, item := range output {
+		result += item
+	}
+
+
+	return result
+}
+
+
+// dá certo mas é ruim, recomendado usar o abaixo
+
+func clearDigits(s string) string {
+	var output []byte  <-  representa um caractere em formato ASCII
+
+	for i := 0; i < len(s); i++ { 
+		c := s[i]  'c' <-  representa um caractere como valor numérico
+		if c >= '0' & & c <= '9' {  
+			if len(output) > 0 {
+				output = output[:len(output)-1]
+			}
+		} else {
+			output = append(output, c)
+		}
+	}
+
+	return string(output)
+}
