@@ -1,9 +1,9 @@
 package main
 
 import (
+	"awesomeProject/dataStructures"
 	"awesomeProject/math"
 	"awesomeProject/pessoas"
-	"awesomeProject/dataStructures"
 	"fmt"
 )
 
@@ -90,16 +90,30 @@ func main() {
 	ll.Prepend(&dataStructures.Node{Data: 30})
 
 	fmt.Println("Lista após adicionar elementos:")
-	ll.PrintListData() 
+	ll.PrintListData()
 
 	ll.DeleteNode(20)
 
 	fmt.Println("Lista após deletar o nó com valor 20:")
-	ll.PrintListData() 
+	ll.PrintListData()
 
 	ll.DeleteNode(30)
 	ll.DeleteNode(10)
 
 	fmt.Println("Lista após deletar o nó com valor 30 e 10:")
-	ll.PrintListData() 
+	ll.PrintListData()
+
+	// stack
+
+	fmt.Println("Stack: ")
+
+	stack := &dataStructures.Stack{}
+
+	stack.Push(10)
+	stack.Push(42)
+	stack.Print()
+
+	stack.Pop()
+	stack.Print()
+
 }
