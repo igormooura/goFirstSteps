@@ -1,0 +1,18 @@
+func makeGood(s string) string {
+    var output []byte
+
+    for i := 0; i < len(s); i++ {
+        letter := s[i]
+        n := len(output)
+
+
+        // ^ <- verifica se a letra atual e a última letra são a mesma letra com caso diferente (maiúscula/minúscula)
+        if n > 0 && (letter^output[n-1]) == 'a'-'A' {
+            output = output[:n-1]
+        } else {
+            output = append(output, letter) 
+        }
+    }
+    
+    return string(output)
+}
