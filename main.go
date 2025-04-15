@@ -116,4 +116,34 @@ func main() {
 	stack.Pop()
 	stack.Print()
 
+	fmt.Println("================================")
+	fmt.Println("Binary Search Tree Operations:")
+
+	tree := dataStructures.NewTree(10)
+	tree = dataStructures.Insert(tree, 5)
+	tree = dataStructures.Insert(tree, 15)
+	tree = dataStructures.Insert(tree, 2)
+	tree = dataStructures.Insert(tree, 7)
+	tree = dataStructures.Insert(tree, 12)
+	tree = dataStructures.Insert(tree, 18)
+
+	fmt.Println("Initial tree:")
+	dataStructures.PrintTree(tree, 0)
+
+	var values []int
+	dataStructures.TraverseInOrder(tree, &values)
+	fmt.Println("\nValues in order:", values)
+
+	fmt.Println("\nDeleting value 5:")
+	tree = dataStructures.Delete(tree, 5)
+	dataStructures.PrintTree(tree, 0)
+
+	fmt.Println("\nInserting value 20:")
+	tree = dataStructures.Insert(tree, 20)
+	dataStructures.PrintTree(tree, 0)
+
+	values = []int{}
+	dataStructures.TraverseInOrder(tree, &values)
+	fmt.Println("\nFinal values in order:", values)
+
 }
