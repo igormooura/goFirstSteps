@@ -1,0 +1,21 @@
+func lengthOfLongestSubstring(s string) int {
+    resultadoFinal := []rune{}
+    resultado := []rune{}
+    
+    for _, char := range s { // loop pra s[i]
+        for i, c := range resultado {  // loop em resultado e verifica se o caracter já tá em resultado
+            if c == char {
+                resultado = resultado[i+1:]
+                break
+            }
+        }
+        
+        resultado = append(resultado, char) 
+        
+        if len(resultado) > len(resultadoFinal) {
+            resultadoFinal = resultado
+        }
+    }
+    
+    return len(resultadoFinal)
+}
